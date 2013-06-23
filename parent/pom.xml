@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.geae</groupId>
+  <artifactId>parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>geae</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<version.java>1.6</version.java>
+      	<version.junit>4.10</version.junit>
+      	<version.maven.compiler.plugin>2.3.2</version.maven.compiler.plugin>
+      	 <version.maven.jar.plugin>2.4</version.maven.jar.plugin>
+  </properties>
+
+  <modules>
+    <module>geae-entity</module>
+    <module>geae-dao</module>
+    <module>geae-test</module>
+  </modules>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${version.junit}</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+		<groupId>javax</groupId>
+		<artifactId>javaee-api</artifactId>
+		<version>6.0</version>
+	</dependency>
+	
+<!-- 	<dependency> -->
+<!-- 	    <groupId>org.jboss.weld.se</groupId> -->
+<!-- 	    <artifactId>weld-se</artifactId> -->
+<!-- 	    <version>2.0.0.Final</version> -->
+<!-- 	</dependency> -->
+  </dependencies>
+  
+  <dependencyManagement>
+  		<dependencies>
+  			<dependency>
+			  	<groupId>com.geae</groupId>
+			  	<artifactId>geae-dao</artifactId>
+			  	<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+  		</dependencies>
+  </dependencyManagement>
+  
+    <build>       
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.maven.compiler.plugin}</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <source>${version.java}</source>
+                    <target>${version.java}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
