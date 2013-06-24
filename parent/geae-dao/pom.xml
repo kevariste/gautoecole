@@ -16,12 +16,62 @@
 	  <dependency>
 	  	<groupId>com.geae</groupId>
 	  	<artifactId>geae-entity</artifactId>
-	  	<version>1.0.0-SNAPSHOT</version>
 	  </dependency>
+	  
+	  <dependency>
+		 <groupId>org.springframework</groupId>
+		 <artifactId>spring-context</artifactId>	
+	</dependency>
+		
+	  <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>	
+	  </dependency>
+	
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>	
+		</dependency>
+		
+	  <dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>		
+	</dependency>
+	
+	<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+	</dependency>
+	
+	<!-- TEST -->
+	<dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>20030825.184428</version>
+	</dependency>
+	            
+       <dependency>
+      <groupId>commons-pool</groupId>
+      <artifactId>commons-pool</artifactId>
+      <version>20030825.183949</version>
+    </dependency>
+    
+    <dependency>
+		<groupId>hsqldb</groupId>
+		<artifactId>hsqldb</artifactId>
+		<version>1.8.0.10</version>
+	</dependency>
+	            
+	<dependency>
+		<groupId>commons-collections</groupId>
+		<artifactId>commons-collections</artifactId>
+		<version>20040616</version>
+	</dependency>
+	                        
   </dependencies>
   
   <build>
-        <plugins>
+       <!-- <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -34,6 +84,6 @@
                     </archive>
                 </configuration>
             </plugin>
-        </plugins>
+        </plugins>-->
     </build>
 </project>

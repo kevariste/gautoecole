@@ -2,7 +2,6 @@ package com.geae.dao;
 
 import java.util.Set;
 
-import javax.ejb.Remote;
 import javax.persistence.EntityManager;
 
 import org.geae.entity.BaseEntity;
@@ -12,7 +11,6 @@ import org.geae.entity.BaseEntity;
  * @author Evariste
  *
  */
-@Remote(value=GenericDao.class)
 public interface GenericDao {
 
 	public <T extends BaseEntity> Long save(T entity);
