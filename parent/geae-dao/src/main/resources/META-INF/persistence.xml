@@ -6,6 +6,7 @@
 
     <persistence-unit name="PU" transaction-type="RESOURCE_LOCAL">
     	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+    	<class>com.geae.domain.model.Eleve</class>
     </persistence-unit>
     
 </persistence>        

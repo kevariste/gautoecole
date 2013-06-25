@@ -32,7 +32,7 @@ public class GenericServiceImpl implements GenericService {
 		
 		log.info(e.getId());
 		
-		return e.getId().toString();
+		return "";
 	}
 
 }

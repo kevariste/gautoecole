@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+@Entity(name="Eleve")
 @Table(name="eleve")
 public class Eleve implements BaseModel {
 	/**
@@ -17,9 +17,12 @@ public class Eleve implements BaseModel {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
-
 	private String nom;
 	private String prenom;
+	
+	
+	public Eleve(){	
+	}
 	
 	@Override
 	public Long getId() {		
