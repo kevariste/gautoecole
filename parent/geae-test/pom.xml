@@ -14,8 +14,7 @@
     <dependencies>
 		<dependency>
 		  	<groupId>com.geae</groupId>
-		  	<artifactId>geae-business</artifactId>
-		  	<version>1.0.0-SNAPSHOT</version>
+		  	<artifactId>geae-service</artifactId>
 	  	</dependency>
 	  	
 	  	<dependency>

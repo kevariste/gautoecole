@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.geae.business.GenericBusiness;
+import com.geae.service.GenericService;
 
 /**
  * Servlet implementation class Test
@@ -31,7 +31,7 @@ public class Test extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		GenericBusiness bean = (GenericBusiness)WebApplicationContextUtils.getWebApplicationContext(request.getSession().getServletContext()).getBean("genericBusiness");
+		GenericService bean = (GenericService)WebApplicationContextUtils.getWebApplicationContext(request.getSession().getServletContext()).getBean("genericBusiness");
 		if(bean != null){
 			bean.getString();
 		}

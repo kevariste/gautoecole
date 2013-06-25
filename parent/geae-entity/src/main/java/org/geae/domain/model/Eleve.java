@@ -1,4 +1,4 @@
-package org.geae.entity;
+package org.geae.domain.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="eleve")
-public class Eleve implements BaseEntity {
+public class Eleve implements BaseModel {
 	/**
 	 * 
 	 */

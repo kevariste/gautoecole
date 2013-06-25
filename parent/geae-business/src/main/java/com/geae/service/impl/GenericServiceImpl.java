@@ -1,12 +1,13 @@
-package com.geae.business;
+package com.geae.service.impl;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.geae.entity.Eleve;
+import org.geae.domain.model.Eleve;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.geae.dao.GenericDao;
+import com.geae.domain.dao.GenericDao;
+import com.geae.service.GenericService;
 
 /**
  * 
@@ -14,8 +15,8 @@ import com.geae.dao.GenericDao;
  *
  */
 @Service("genericBusiness")
-public class GenericBusinessImpl implements GenericBusiness {
-	private static final Log log = LogFactory.getLog(GenericBusinessImpl.class);
+public class GenericServiceImpl implements GenericService {
+	private static final Log log = LogFactory.getLog(GenericServiceImpl.class);
 	
 	@Autowired
 	private GenericDao genericDao;

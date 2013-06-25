@@ -1,4 +1,4 @@
-package com.geae.business;
+package com.geae.service;
 
 import org.springframework.transaction.annotation.Transactional;
 
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
  *
  */
 @Transactional
-public interface GenericBusiness {
+public interface GenericService {
 
 	public String getString();
 }

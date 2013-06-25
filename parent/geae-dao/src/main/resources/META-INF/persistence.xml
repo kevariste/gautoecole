@@ -6,8 +6,6 @@
 
     <persistence-unit name="PU" transaction-type="RESOURCE_LOCAL">
     	<provider>org.hibernate.ejb.HibernatePersistence</provider>
-<!--     	<jta-data-source>jdbc/geae</jta-data-source>         -->
-<!--        <jar-file>geae-entity</jar-file> -->
     </persistence-unit>
     
 </persistence>        
