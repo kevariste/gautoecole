@@ -8,3 +8,5 @@ Spring, hibernate/jpa, java, maven, eclipse
 
 Configuration:
 Cf: http://loic-frering.developpez.com/tutoriels/java/hibernate-jpa-spring-tapestry/#L1-1-3
+Cf: http://www.ibm.com/developerworks/library/j-typesafejpa/ : JPA criteria
+
