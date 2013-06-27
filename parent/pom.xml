@@ -29,6 +29,7 @@
     <module>geae-dao</module>
     <module>geae-service</module>
     <module>geae-test</module>
+    <module>geae-flex</module>
   </modules>
   
   <dependencies>

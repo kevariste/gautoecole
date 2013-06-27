@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+                     http://maven.apache.org/maven-v4_0_0.xsd">
+					 
+  <modelVersion>4.0.0</modelVersion>  
+  <artifactId>geae-flex</artifactId>
+  <packaging>pom</packaging>
+  
+  <parent>
+    <groupId>com.geae</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  
+  <!--http://maven-guide-fr.erwan-alliaume.com/maven-guide-fr/site/reference/flex-dev-sect-multimodule-archetype.html-->
+  <modules>
+    <module>swc</module>
+    <module>swf</module>
+    <module>war</module>
+  </modules>
+  
+  <dependencyManagement>
+  	<dependencies>
+  		  <dependency>
+		      <groupId>com.adobe.flex.framework</groupId>
+		      <artifactId>flex-framework</artifactId>
+		      <version>4.6.b.23201</version>
+		      <type>pom</type>
+		    </dependency>
+  	</dependencies>
+  </dependencyManagement>
+  <repositories>
+		<repository>
+			<id>flex-mojos-repository</id> 
+			<url>http://repository.sonatype.org/content/groups/flexgroup</url>
+			 <releases> 
+			 	<enabled>true</enabled> 
+			 </releases> 
+			 <snapshots> 
+			 	<enabled>false</enabled> 
+		 	</snapshots> 
+		</repository>
+	</repositories>
+	<pluginRepositories> 
+		<pluginRepository> 
+			<id>flex-mojos-plugin-repository</id> 
+			<url>http://repository.sonatype.org/content/groups/flexgroup</url> 
+			</pluginRepository> 
+	</pluginRepositories>
+	
+</project>
