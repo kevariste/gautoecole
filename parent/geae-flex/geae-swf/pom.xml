@@ -27,6 +27,7 @@
           <locales>
             <locale>fr_FR</locale>
           </locales>
+        <ignoreVersionIssues>true</ignoreVersionIssues>
         </configuration>
       </plugin>
     </plugins>
