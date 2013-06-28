@@ -13,9 +13,9 @@
   
   <!--http://maven-guide-fr.erwan-alliaume.com/maven-guide-fr/site/reference/flex-dev-sect-multimodule-archetype.html-->
   <modules>
-    <module>swc</module>
-    <module>swf</module>
-    <module>war</module>
+    <module>geae-swc</module>
+    <module>geae-swf</module>
+    <module>geae-war</module>
   </modules>
   
   <dependencyManagement>
@@ -26,6 +26,65 @@
 		      <version>4.5.0.20967</version>
 		      <type>pom</type>
 		    </dependency>
+		    
+		    <dependency>
+				<groupId>com.adobe.cairngorm</groupId>
+				<artifactId>integrationParsley</artifactId>
+				<version>0.15</version>
+				<type>swc</type>
+			</dependency>
+			<dependency>
+				<groupId>com.adobe.cairngorm</groupId>
+				<artifactId>observer</artifactId>
+				<version>1.9</version>
+				<type>swc</type>
+			</dependency>
+			<dependency>
+				<groupId>com.adobe.cairngorm</groupId>
+				<artifactId>popup</artifactId>
+				<version>1.12</version>
+				<type>swc</type>
+			</dependency>
+			<dependency>
+				<groupId>com.adobe.cairngorm</groupId>
+				<artifactId>popupParsley</artifactId>
+				<version>1.12</version>
+				<type>swc</type>
+			</dependency>
+			<dependency>
+				<groupId>com.adobe.cairngorm</groupId>
+				<artifactId>validation</artifactId>
+				<version>1.12</version>
+				<type>swc</type>
+			</dependency>
+		    
+		    <dependency>
+				<groupId>com.adobe.flexunit</groupId>
+				<artifactId>flexunit</artifactId>
+				<version>4.0-rc-1</version>
+				<type>swc</type>
+				<scope>test</scope>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.spicefactory</groupId>
+				<artifactId>parsley-flex4</artifactId>
+				<version>2.3.2</version>
+				<type>swc</type>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.spicefactory</groupId>
+				<artifactId>spicelib-flex</artifactId>
+				<version>2.3.2</version>
+				<type>swc</type>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.flex</groupId>
+				<artifactId>spring-flex</artifactId>
+				<version>1.0.3.RELEASE</version>
+				<type>jar</type>
+			</dependency>
   	</dependencies>
   </dependencyManagement>
   

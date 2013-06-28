@@ -8,7 +8,7 @@
 	<version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>swc</artifactId>
+  <artifactId>geae-swc</artifactId>
   <packaging>swc</packaging>
   <name>swc Library</name>
   

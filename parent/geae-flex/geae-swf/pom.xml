@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
- 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
+
   <parent> 
 	<groupId>com.geae</groupId>
-	<artifactId>geae-flex</artifactId>   
+	<artifactId>geae-flex</artifactId>  
 	<version>1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>war</artifactId>
-  <packaging>war</packaging>
+  <artifactId>geae-swf</artifactId>
+  <packaging>swf</packaging>
+  <name>swf Application</name>
 
   <build>
+    <sourceDirectory>src/main/flex</sourceDirectory>
+    <testSourceDirectory>src/test/flex</testSourceDirectory>
+    
     <plugins>
       <plugin>
         <groupId>org.sonatype.flexmojos</groupId>
         <artifactId>flexmojos-maven-plugin</artifactId>
         <version>3.9</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>copy-flex-resources</goal>
-            </goals>
-          </execution>
-        </executions>
+        <extensions>true</extensions>
+        <configuration>
+          <locales>
+            <locale>fr_FR</locale>
+          </locales>
+        </configuration>
       </plugin>
-<!--       <plugin> -->
-<!--         <groupId>org.mortbay.jetty</groupId> -->
-<!--         <artifactId>maven-jetty-plugin</artifactId> -->
-<!--       </plugin> -->
     </plugins>
     
-    <pluginManagement>
+	<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
 					only. It has no influence on the Maven build itself. -->
@@ -51,7 +50,8 @@
 											[3.9,)
 										</versionRange>
 										<goals>
-											<goal>copy-flex-resources</goal>
+											<goal>compile-swf</goal>
+											<goal>test-compile</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
@@ -65,19 +65,19 @@
 			</plugins>
 		</pluginManagement>
   </build>
-  
+
   <dependencies>
     <dependency>
-      <groupId>com.geae</groupId>
-      <artifactId>swf</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-      <type>swf</type>
+      <groupId>com.adobe.flex.framework</groupId>
+      <artifactId>flex-framework</artifactId>
+      <type>pom</type>
     </dependency>
-
-	<!-- DEPENDNCES JAVA -->    
     <dependency>
-	  	<groupId>com.geae</groupId>
-	  	<artifactId>geae-service</artifactId>
-  	</dependency>
+      <groupId>com.geae</groupId>
+       <artifactId>geae-swc</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>swc</type>
+    </dependency>
   </dependencies>
+  
 </project>
