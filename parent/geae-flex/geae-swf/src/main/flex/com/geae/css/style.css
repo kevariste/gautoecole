@@ -1,0 +1,34 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace fs "com.geae.component.fieldSet.*";
+
+
+/* Datagrid */
+.grid {
+	alternatingItemColors: #FFFFFF,#cedbef;
+	vertical-align:middle;
+	text-align:center;
+	horizontal-center:true;
+	selection-color:#a8c6ee;
+	use-roll-over:true;	
+}
+
+fs|FieldSet{
+	cornerRadius: 4;
+	gap: 6;
+	paddingLeft: 10;
+	paddingRight: 0;
+	skinClass : ClassReference("com.geae.skin.fieldset.FieldSetSkin");
+}
+
+
+s|Label {
+	color: #000000;
+	fontSize: 12;
+	fontWeight: normal;
+}
+
+s|Panel{
+	skin-class : ClassReference("com.geae.skin.panel.PanelSkin");
+}

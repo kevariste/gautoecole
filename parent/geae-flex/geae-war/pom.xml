@@ -26,10 +26,6 @@
           </execution>
         </executions>
       </plugin>
-<!--       <plugin> -->
-<!--         <groupId>org.mortbay.jetty</groupId> -->
-<!--         <artifactId>maven-jetty-plugin</artifactId> -->
-<!--       </plugin> -->
     </plugins>
     
     <pluginManagement>
@@ -67,12 +63,12 @@
   </build>
   
   <dependencies>
-    <dependency>
+   <!--  <dependency>
       <groupId>com.geae</groupId>
       <artifactId>geae-swf</artifactId>
       <version>1.0.0-SNAPSHOT</version>
       <type>swf</type>
-    </dependency>
+    </dependency> -->
 
 	<!-- DEPENDNCES JAVA -->    
     <dependency>
@@ -83,7 +79,7 @@
   	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-web</artifactId>
-	</dependency>
+	</dependency> 
 		
   	<!-- <dependency>
 		<dependency>

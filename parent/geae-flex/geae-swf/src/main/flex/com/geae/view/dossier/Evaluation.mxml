@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:NavigatorContent xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					xmlns:s="library://ns.adobe.com/flex/spark" 
+					xmlns:mx="library://ns.adobe.com/flex/mx"
+					xmlns:comp="com.geae.view.dossier.*" width="800">
+	
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	
+	<s:Panel title="Civilité" width="100%">		
+		<mx:Form width="100%"  paddingBottom="10" paddingTop="10">
+			<mx:FormItem label="Code Elève" required="true">				
+				<s:TextInput text=""/>
+			</mx:FormItem>
+			
+			<mx:FormItem label="Nom" required="true">				
+				<s:TextInput text=""/>
+			</mx:FormItem>
+			
+			<mx:FormItem label="Prénom" required="true">
+				<s:TextInput text=""/>				
+			</mx:FormItem>
+			
+			<mx:FormItem label="Sexe" required="true">
+				<s:ComboBox/>
+			</mx:FormItem>						
+			
+			<mx:FormItem label="Date de naissance" required="true">
+				<mx:DateField/>			
+			</mx:FormItem>
+			
+			<mx:FormItem label="Conduite accompgnée/supervisée" required="true">				
+				<s:ComboBox/>
+			</mx:FormItem>
+			
+			<mx:FormItem label="Transfert dossier" required="true">
+				<s:ComboBox/>			
+			</mx:FormItem>
+			
+			<mx:FormItem label="Date d'inscription" required="true">
+				<mx:DateField/>			
+			</mx:FormItem>			
+			
+			<mx:FormItem label="Date obtention du code" required="true">
+				<mx:DateField/>	
+			</mx:FormItem>						
+			
+			<mx:FormItem label="Code obtenu à la" required="true">
+				<s:ComboBox/>
+			</mx:FormItem>			
+			
+			<mx:FormItem label="Score au {new Date()}" required="true">
+				
+			</mx:FormItem>
+		</mx:Form>
+	</s:Panel>
+	
+	
+	<mx:TabNavigator width="100%">
+		<comp:EvaluationTab label="Evaluation" width="100%"/>
+		<comp:EtapesTab label="Etape 1" width="100%" etape="1"/> 
+		<comp:EtapesTab label="Etape 2" width="100%" etape="2"/>
+		<comp:EtapesTab label="Etape 3" width="100%" etape="3"/>
+		<comp:EtapesTab label="Etape 4" width="100%" etape="4"/>
+		<comp:ExamensTab label="Examen blanc" width="100%" examen="1"/>
+		<comp:ExamensTab label="Examen" width="100%" examen="2"/>
+	</mx:TabNavigator>
+	
+	<fx:Declarations>
+		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
+	</fx:Declarations>
+</s:NavigatorContent>

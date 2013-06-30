@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:HGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:mx="library://ns.adobe.com/flex/mx" verticalAlign="middle">
+	
+	<s:Label text="{label}"/>
+	<s:TextInput id="h" maxChars="2" text="@{heure}" restrict="0-9" width="30" textAlign="center" toolTip="Heure"/>
+	<s:Label text=":"/>
+	<s:TextInput id="mn" maxChars="2" text="@{minute}" restrict="0-9" width="30" textAlign="center" toolTip="Minute"/>
+	<s:Label text=":"/>
+	<s:TextInput id="s" maxChars="2" text="@{seconde}" restrict="0-9" width="30" textAlign="center" toolTip="Seconde"/>
+
+	<fx:Declarations>
+		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
+		<mx:NumberValidator
+			id="heureValidator"
+			source="{h}"
+			property="text"
+			minValue="1"
+			maxValue="24"
+			triggerEvent="change"
+			/>
+		
+		<mx:NumberValidator
+			id="minuteValidator"
+			source="{mn}"
+			property="text"
+			minValue="0"
+			maxValue="59"
+			triggerEvent="change"
+			/>
+		
+		<mx:NumberValidator
+			id="secondeValidator"
+			source="{s}"
+			property="text"
+			minValue="0"
+			maxValue="59"
+			triggerEvent="change"
+			/>
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			public var heure:String;
+			
+			[Bindable]
+			public var minute:String;
+
+			[Bindable]
+			public var seconde:String;
+			
+			[Bindable]
+			public var label:String;
+
+		]]>
+	</fx:Script>
+</s:HGroup>

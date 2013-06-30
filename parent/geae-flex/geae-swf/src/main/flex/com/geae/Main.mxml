@@ -1,3 +1,58 @@
-<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute">
-    <mx:Text text="Hello World!"/>
-</mx:Application>
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:comp="com.geae.view.dossier.*"
+			   width="1024">
+		
+	<s:layout>
+		<s:VerticalLayout gap="10"/>
+	</s:layout>
+
+	<mx:ApplicationControlBar dock="true" width="100%" horizontalAlign="right" >
+		<mx:Image  toolTip="Aide?" source="{Icons.HELP}"/>
+		<mx:Spacer width="40"/>
+		<mx:Image toolTip="Déconnexion" source="{Icons.LOGOUT}"/>			  
+	</mx:ApplicationControlBar>
+	
+	<!-- HEAD-->
+	<s:Group width="100%" height="180">
+		<mx:Image source="{Icons.LOGO}"/> 
+	</s:Group>
+	
+	
+	<mx:Spacer height="20"/>
+	
+	<!--BODY-->
+	<s:VGroup width="100%"> 
+		
+		<mx:TabNavigator width="100%" >			
+			<s:NavigatorContent label="Nouveau dossier" width="100%">
+				<comp:DossierView/>
+			</s:NavigatorContent> 
+			
+			<s:NavigatorContent label="Suivi" width="100%"> 
+				<s:Group>
+					<s:layout>
+						<s:VerticalLayout/>
+					</s:layout>
+					<s:Label text="Suivi suivi"/>					
+				</s:Group>
+			</s:NavigatorContent>
+		</mx:TabNavigator>		
+	</s:VGroup>
+	
+	
+	<fx:Declarations>
+		
+	</fx:Declarations>
+	
+	<fx:Style source="css/style.css"/>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.geae.asset.Icons;
+			
+		]]>
+	</fx:Script>
+</s:Application>
