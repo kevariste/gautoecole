@@ -2,22 +2,48 @@
 <s:NavigatorContent xmlns:fx="http://ns.adobe.com/mxml/2009" 
 					xmlns:s="library://ns.adobe.com/flex/spark" 
 					xmlns:mx="library://ns.adobe.com/flex/mx"
-					xmlns:tf="com.geae.component.time.*">
+					xmlns:tf="com.geae.component.time.*" height="100%">
 	<s:layout>
-		<s:VerticalLayout/>
+		<s:VerticalLayout paddingBottom="10"/>
 	</s:layout>
 	
-	<s:HGroup paddingLeft="20" gap="10" paddingBottom="10" paddingRight="10" paddingTop="10">
-			<tf:TimeField id="hdebut" label="Heure début"/>				
-			<tf:TimeField id="hfin" label="Heure fin"/>
+	<s:HGroup paddingLeft="20" gap="15" paddingBottom="10" paddingRight="10" paddingTop="10" horizontalAlign="center" width="100%">
+			<tf:TimeField id="hdebut" label="Heure de début"/>				
+			<tf:TimeField id="hfin" label="Heure de fin"/>
 			<mx:Spacer width="30"/>
 			<mx:Image source="{Icons.ADD}" toolTip="Ajouter"/>
 	</s:HGroup>
 
-	<s:HGroup width="100%" horizontalAlign="center">		
-		<s:BorderContainer height="1" width="700" borderColor="0xCCCCCC"/>
+	
+	<!--LISTE DES HEURES-->
+	<s:HGroup width="100%" horizontalAlign="center">	
+		<mx:DataGrid dataProvider="{timesListe}" width="80%" headerHeight="25" verticalScrollPolicy="on"
+					 rowCount="7" editable="true" itemEditEnd="datagrid1_itemEditEndHandler(event)">
+			<mx:columns>
+				<mx:DataGridColumn headerText="Heure de début" dataField="heureDebut"  width="280"/>
+				<mx:DataGridColumn headerText="Heure de Fin" dataField="heureFin" width="280"/>
+				<mx:DataGridColumn textAlign="center" editable="false" >					
+					<mx:itemRenderer>
+						<fx:Component>															
+							<mx:Image source="{Icons.DELETE}" buttonMode="true" click="deletePlageHoraire(event)">
+								<fx:Script>
+									<![CDATA[
+										import com.geae.asset.Icons;
+
+										protected function deletePlageHoraire(event:MouseEvent):void{
+
+										}
+
+									]]>
+								</fx:Script>
+							</mx:Image>
+							
+						</fx:Component>
+					</mx:itemRenderer>
+				</mx:DataGridColumn>
+			</mx:columns>
+		</mx:DataGrid>
 	</s:HGroup>
-		
 	
 	<fx:Declarations>
 		<!-- Placer ici les éléments non visuels (services et objets de valeur, par exemple). -->
@@ -25,9 +51,30 @@
 	
 	<fx:Script>
 		<![CDATA[
+			import mx.events.DataGridEvent;
+			import mx.controls.Alert;
+			import mx.events.ListEvent;
+			import mx.collections.ArrayCollection;
 			import com.geae.asset.Icons;
+			
 			[Bindable]
 			public var etape:String;
+			
+			[Bindable]
+			public var timesListe:ArrayCollection = new ArrayCollection([
+				{id:"1",heureDebut:"10h00",heureFin:"12h00"},
+				{id:"2",heureDebut:"14h00",heureFin:"16h00"}]);
+			
+
+			protected function row_changeHandler(event:ListEvent):void{
+				Alert.show();
+			}
+
+
+			protected function datagrid1_itemEditEndHandler(event:DataGridEvent):void{
+				
+			}
+
 		]]>
 	</fx:Script>
 </s:NavigatorContent>

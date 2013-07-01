@@ -7,7 +7,8 @@
 		 horizontalAlign="center"
 		 paddingBottom="20"
 		 paddingTop="10"
-		 width="100%">	
+		 width="100%">
+	
 	<fx:Script>
 		<![CDATA[
 
@@ -20,7 +21,7 @@
 		]]>
 	</fx:Script>
 	
-	<mx:ViewStack selectedIndex="1">
+	<mx:ViewStack selectedIndex="1" resizeToContent="true">
 		<comp:Nouveau/>
 		<comp:Evaluation/>
 	</mx:ViewStack>

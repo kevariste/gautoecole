@@ -13,6 +13,12 @@ package com.geae.asset{
 		public static const HELP:Class;
 		
 		[Embed(source="add.jpg")]
-		public static const ADD:Class; 
+		public static const ADD:Class;
+		
+		[Embed(source="delete.jpg")]
+		public static const DELETE:Class;
+		
+		[Embed(source="edit.jpg")]
+		public static const EDIT:Class;
 	}
 }

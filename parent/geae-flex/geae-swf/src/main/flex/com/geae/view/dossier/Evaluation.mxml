@@ -57,7 +57,7 @@
 	</s:Panel>
 	
 	
-	<mx:TabNavigator width="100%">
+	<mx:TabNavigator width="100%" resizeToContent="true">
 		<comp:EvaluationTab label="Evaluation" width="100%"/>
 		<comp:EtapesTab label="Etape 1" width="100%" etape="1"/> 
 		<comp:EtapesTab label="Etape 2" width="100%" etape="2"/>
